@@ -4,14 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>World Weather</title>
+    
     <link href="source/index.js" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>World Weather</title>
     <link rel="stylesheet" href="source/style.css" />
   </head>
   <body>
@@ -19,7 +16,7 @@
       <div class="site-wrapper">
         <form id="search-form"> 
         <div class="row">
-          <div class="col-6 searchBar">
+          <div class="col-5 searchBar">
             <div class="mb-3">
               <input
                 type="text"
@@ -31,9 +28,16 @@
             </div>
           </div>
 
-          <div class="col-3 searchButton">
+          
+          <div class="col-1 searchButton">
             <button type="submit" class="btn btn-primary">Search</button>
+           
           </div>
+          <div class="col-3 locationButton">
+              <button class="btn btn-primary" id="current-location-btn">Current Location</button>
+            </div>
+
+          
 
           <div class="col-3 temperature-type">
             <div
@@ -67,7 +71,7 @@
           </div>
         </form>
           <div class="row">
-            <div class="col-12 location"><h2>Sydney</h2></div>
+            <div class="col-12 location"><h2 id="city"></h2></div>
             <div class="col-12 date" id="today-date">
               Today, Monday 03 January
             </div>
@@ -84,9 +88,12 @@
             />
           </div>
           <div class="col-3 maintemp">
-            26&degC
+            <span class="main-temperature" id="main-temperature"></span>
+                    
+            
+            
             <div class="row">
-              <div class="col-12 minmax">20&degC | 29&degC</div>
+              <div class="col-12 minmax"><span id="description"></span></div>
             </div>
           </div>
           <div class="col main-description">
@@ -100,7 +107,7 @@
               </div>
 
               <div class="col-9 rain">
-                Rain chance: 5%
+                Min: <span id="min"></span>  
               </div>
 
               <div class="col-3 rain">
@@ -112,7 +119,7 @@
               </div>
 
               <div class="col-9 rainfall">
-                Rainfall: 0-0.3mm
+                Max: <span id="max"></span> 
               </div>
 
               <div class="col-3 wind">
@@ -124,7 +131,7 @@
               </div>
 
               <div class="col-9 wind">
-                Wind: 30km/hr
+                Wind: <span id="wind-speed"></span>km/hr
               </div>
 
               <div class="col-3 fire">
@@ -136,7 +143,7 @@
               </div>
 
               <div class="col-9 fire">
-                Fire danger: High
+                Humidity: <span id="humidity"></span>% 
               </div>
             </div>
           </div>

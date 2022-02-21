@@ -17,26 +17,38 @@ body {
   background-size: auto;
 }
 
+h2 {
+  font-size: 50px;
+}
+
 .mb-3 {
-  width: 400px;
+  width: 270px;
   display: inline-flex;
-  padding: 0 10px 0 50px;
-  padding-top: 10px;
+  padding: 0 10px 0 10px;
+  padding-top: 15px;
   text-align: right;
 }
 
-.col-3.searchButton {
-  padding-top: 10px;
-  padding-left: 50px;
+.col-1.searchButton {
+  padding-top: 15px;
+  padding-left: 0px;
   padding-right: 0px;
-  text-align: center;
+  text-align: left;
+}
+
+.col-3.locationButton {
+  padding-top: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: right;
 }
 
 .col-3.temperature-type {
   display: block;
-  text-align: left;
+  text-align: right;
   padding-left: 0px;
-  padding-top: 10px;
+  padding-top: 15px;
+  padding-right: 20px;
 }
 
 .col-12.location {
@@ -63,6 +75,10 @@ body {
 .col-3.maintemp {
   font-size: 70px;
   padding-left: 50px;
+}
+
+.celsius {
+  font-size: 30px;
 }
 
 .minmax {
@@ -105,6 +121,12 @@ body {
 
 .fire-icon {
   margin-left: 29px;
+}
+
+.card {
+  box-shadow: 1px 2px 3px rgb(0 0 0 / 10%);
+  border-radius: 15px;
+  padding-bottom: 5px;
 }
 
 .weekly {
