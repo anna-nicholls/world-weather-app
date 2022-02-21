@@ -1,0 +1,135 @@
+.container {
+  margin: 30px auto;
+}
+
+.site-wrapper {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px 20px 20px 30px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px 3px rgb(10 10 10 / 20%);
+  background: #fff;
+  text-align: center;
+}
+
+body {
+  background: url("images/back/background3.jpg");
+  background-size: auto;
+}
+
+.mb-3 {
+  width: 400px;
+  display: inline-flex;
+  padding: 0 10px 0 50px;
+  padding-top: 10px;
+  text-align: right;
+}
+
+.col-3.searchButton {
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 0px;
+  text-align: center;
+}
+
+.col-3.temperature-type {
+  display: block;
+  text-align: left;
+  padding-left: 0px;
+  padding-top: 10px;
+}
+
+.col-12.location {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.col-12.date {
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.main-icon {
+  padding-top: 20px;
+}
+
+.maintemp-graphic {
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 30%);
+  border-radius: 15px;
+  margin: 20px 0 0 0;
+}
+
+.col-3.maintemp {
+  font-size: 70px;
+  padding-left: 50px;
+}
+
+.minmax {
+  font-size: 20px;
+  width: 150px;
+  text-align: center;
+  padding-top: 10px;
+  padding-right: 0px;
+  padding-left: 30px;
+}
+
+.col.main-description {
+  font-size: 20px;
+  padding-top: 0px;
+  padding-left: 70px;
+}
+
+.weather-stats {
+  padding-top: 25px;
+  font-size: 18px;
+}
+
+.week-weather {
+  padding-top: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.rainchance-icon {
+  margin-left: 25px;
+}
+
+.rain-icon {
+  margin-left: 27px;
+}
+
+.wind-icon {
+  margin-left: 28px;
+}
+
+.fire-icon {
+  margin-left: 29px;
+}
+
+.weekly {
+  display: block;
+  margin: 0 auto;
+}
+
+.col-9.rain {
+  text-align: left;
+}
+
+.col-9.rainfall {
+  text-align: left;
+}
+
+.col-9.wind {
+  text-align: left;
+}
+
+.col-9.fire {
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+  padding-top: 20px;
+  margin-right: 20px;
+}
