@@ -99,7 +99,7 @@ function displayFarenheit(event) {
   event.preventDefault();
   let mainTemp = document.querySelector("#main-temperature");
   let temperature = mainTemp.innerHTML;
-  mainTemp.innerHTML = `${Math.round((temperature * 9) / 5 + 32)}&degF`;
+  mainTemp.innerHTML = `${Math.round((temperature * 9) / 5 + 32)}`;
 }
 
 let farenheitLink = document.querySelector("#btnradio2");
@@ -110,7 +110,7 @@ farenheitLink.addEventListener("click", displayFarenheit);
 function displayCelsius(event) {
   event.preventDefault();
   let mainTemp = document.querySelector("#main-temperature");
-  mainTemp.innerHTML = "26&degC";
+  mainTemp.innerHTML = "26";
 }
 
 let mainTemp = document.querySelector("#main-temperature");

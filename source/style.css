@@ -72,9 +72,16 @@ h2 {
   margin: 20px 0 0 0;
 }
 
-.col-3.maintemp {
+.col-4.maintemp {
   font-size: 70px;
   padding-left: 50px;
+}
+
+.temp-units {
+  font-size: 20px;
+  float: right;
+  padding-top: 20px;
+  padding-right: 10px;
 }
 
 .celsius {
@@ -93,7 +100,7 @@ h2 {
 .col.main-description {
   font-size: 20px;
   padding-top: 0px;
-  padding-left: 70px;
+  padding-left: 40px;
 }
 
 .weather-stats {
