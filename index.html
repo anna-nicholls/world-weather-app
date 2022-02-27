@@ -24,62 +24,31 @@
                 type="text"
                 class="form-control"
                 id="form-input"
-                aria-describedby="emailHelp"
                 placeholder="Enter city"
               />
             </div>
           </div>
 
           
-          <div class="col-1 searchButton">
+          <div class="col-3 searchButton">
             <button type="submit" class="btn btn-primary">Search</button>
            
           </div>
-          <div class="col-3 locationButton">
+          <div class="col-4 locationButton">
               <button class="btn btn-primary" id="current-location-btn">Current Location</button>
             </div>
 
           
 
-          <div class="col-3 temperature-type">
-            <div
-              class="btn-group"
-              role="group"
-              aria-label="Basic radio toggle button group"
-            >
-              <input
-                type="radio"
-                class="btn-check"
-                name="btnradio"
-                id="btnradio1"
-                autocomplete="off"
-                checked
-              />
-              <label class="btn btn-outline-primary" for="btnradio1"
-                >&degC</label
-              >
-
-              <input
-                type="radio"
-                class="btn-check"
-                name="btnradio"
-                id="btnradio2"
-                autocomplete="off"
-              />
-              <label class="btn btn-outline-primary" for="btnradio2"
-                >&degF</label
-              >
-            </div>
-          </div>
         </form> 
           <div class="row">
             <div class="col-12 location"><h2 id="city"></h2></div>
             <div class="col-12 date" id="today-date">
-              Monday 03 January
+              
             </div>
             
              <div class="col-12 summary" >
-              <span>Today's weather: </span>
+              <span>Today's weather : </span>
               <span id="weather-summary">clounds, wind etc</span>
               
               
@@ -100,7 +69,10 @@
           </div>
           <div class="col-4 maintemp">
             <span class="main-temperature" id="main-temperature"></span>
-            <span class="temp-units">°C | °F</span>
+            <span class="temp-units">
+              <span id="celsius-button">°C</span> | 
+              <span id="fahrenheit-button">°F</span>
+            </span>
             
             
             
@@ -177,7 +149,7 @@
                 alt="yellow sun graphic"
                 width="80px"
               />
-              <div>30&degC | 24&degC</div>
+              <div>30  /  24</div>
             </div>
           </div>
           <div class="col">
@@ -189,7 +161,7 @@
                 alt="cloud over sun graphic"
                 width="80px"
               />
-              <span> 24&degC | 20&degC </span>
+              <span> 24  /  20 </span>
             </div>
           </div>
           <div class="col">
@@ -201,7 +173,7 @@
                 alt="cloud over sun graphic"
                 width="80px"
               />
-              <span> 24&degC | 19&degC </span>
+              <span> 24  /  19 </span>
             </div>
           </div>
           <div class="col">
@@ -213,7 +185,7 @@
                 alt="cloud with rain graphic"
                 width="80px"
               />
-              <span> 21&degC | 19&degC </span>
+              <span> 21  /  19 </span>
             </div>
           </div>
           <div class="col">
@@ -225,7 +197,7 @@
                 alt="cloud graphic"
                 width="80px"
               />
-              <span> 23&degC | 20&degC </span>
+              <span> 23  /  20 </span>
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@
   max-height: 645px;
   margin: auto;
   border-bottom: 10px;
-  padding: 20px 20px 20px 30px;
+  padding: 20px 20px 20px 20px;
   border-radius: 15px;
   box-shadow: 5px 5px 10px 3px rgb(10 10 10 / 20%);
   background: #fff;
@@ -25,25 +25,26 @@ h2 {
 }
 
 .mb-3 {
-  width: 270px;
+  width: 300px;
   display: inline-flex;
   padding: 0 10px 0 10px;
   padding-top: 15px;
   text-align: right;
+  margin-left: 40px;
 }
 
-.col-1.searchButton {
+.col-3.searchButton {
   padding-top: 15px;
   padding-left: 0px;
-  padding-right: 0px;
-  text-align: left;
-}
-
-.col-3.locationButton {
-  padding-top: 15px;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-right: 17px;
   text-align: right;
+}
+
+.col-4.locationButton {
+  padding-top: 15px;
+  padding-left: 0px;
+  padding-right: 60px;
+  text-align: center;
 }
 
 .col-3.temperature-type {
@@ -67,12 +68,13 @@ h2 {
 
 .col-12.summary {
   padding-top: 20px;
-  font-size: 20px;
+  font-size: 22px;
   font-style: italic;
 }
 
 .main-icon {
   padding-top: 20px;
+  padding-left: 10px;
 }
 
 .maintemp-graphic {
@@ -83,8 +85,9 @@ h2 {
 
 .col-4.maintemp {
   font-size: 70px;
-  padding-left: 70px;
+  text-align: right;
   padding-top: 20px;
+  padding-left: 20px;
 }
 
 .temp-units {
@@ -125,6 +128,7 @@ h2 {
   padding-top: 30px;
   border-radius: 15px;
   text-align: center;
+  font-size: 18px;
 }
 
 .card {

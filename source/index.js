@@ -103,7 +103,7 @@ function displayFarenheit(event) {
   mainTemp.innerHTML = `${Math.round((temperature * 9) / 5 + 32)}`;
 }
 
-let farenheitLink = document.querySelector("#btnradio2");
+let farenheitLink = document.querySelector("#fahrenheit-button");
 farenheitLink.addEventListener("click", displayFarenheit);
 
 // C conversion and display in main
@@ -117,5 +117,5 @@ function displayCelsius(event) {
 let mainTemp = document.querySelector("#main-temperature");
 let temperature = mainTemp.innerHTML;
 
-let celsiusLink = document.querySelector("#btnradio1");
+let celsiusLink = document.querySelector("#celsius-button");
 celsiusLink.addEventListener("click", displayCelsius);
