@@ -69,7 +69,7 @@
               >
             </div>
           </div>
-        </form>
+        </form> 
           <div class="row">
             <div class="col-12 location"><h2 id="city"></h2></div>
             <div class="col-12 date" id="today-date">
@@ -106,29 +106,36 @@
           </div>
           <div class="col main-description">
             <div class="row weather-stats">
-              <div class="col-3 rainchance">
-                <img
-                  class="rainchance-icon"
-                  src="images/weather1/umbrella.png"
-                  width="25px"
-                />
-              </div>
 
-              <div class="col-9 rain">
-                Min: <span id="min"></span>  
-              </div>
-
-              <div class="col-3 rain">
+              <div class="col-3 max">
                 <img
-                  class="rain-icon"
-                  src="images/weather1/drop.png"
+                  class="max-icon"
+                  src="images/weather1/up.png"
                   width="20px"
                 />
               </div>
 
-              <div class="col-9 rainfall">
-                Max: <span id="max"></span> 
+              <div class="col-9 max">
+                Max: <span id="maximum"></span>  
               </div>
+
+
+
+              <div class="col-3 min">
+                <img
+                  class="min-icon"
+                  src="images/weather1/down.png"
+                  width="20px"
+                />
+              </div>
+              <div class="col-9 min">
+                Min: <span id="minimum"></span> 
+              </div>
+
+
+
+
+
 
               <div class="col-3 wind">
                 <img
@@ -142,15 +149,16 @@
                 Wind: <span id="wind-speed"></span>km/hr
               </div>
 
-              <div class="col-3 fire">
+
+              <div class="col-3 humidity">
                 <img
-                  class="fire-icon"
-                  src="images/weather1/fire.png"
+                  class="humidity-icon"
+                  src="images/weather1/drop.png"
                   width="20px"
                 />
               </div>
 
-              <div class="col-9 fire">
+              <div class="col-9 humidity">
                 Humidity: <span id="humidity"></span>% 
               </div>
             </div>

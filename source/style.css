@@ -80,7 +80,7 @@ h2 {
 
 .col-4.maintemp {
   font-size: 70px;
-  padding-left: 50px;
+  padding-left: 70px;
   padding-top: 20px;
 }
 
@@ -89,15 +89,6 @@ h2 {
   float: right;
   padding-top: 20px;
   padding-right: 10px;
-}
-
-.minmax {
-  font-size: 20px;
-  width: 150px;
-  text-align: center;
-  padding-top: 10px;
-  padding-right: 0px;
-  padding-left: 30px;
 }
 
 .col.main-description {
@@ -111,17 +102,11 @@ h2 {
   font-size: 18px;
 }
 
-.week-weather {
-  padding-top: 40px;
-  border-radius: 15px;
-  text-align: center;
+.max-icon {
+  margin-left: 27px;
 }
 
-.rainchance-icon {
-  margin-left: 25px;
-}
-
-.rain-icon {
+.min-icon {
   margin-left: 27px;
 }
 
@@ -129,8 +114,14 @@ h2 {
   margin-left: 28px;
 }
 
-.fire-icon {
+.humidity-icon {
   margin-left: 29px;
+}
+
+.week-weather {
+  padding-top: 40px;
+  border-radius: 15px;
+  text-align: center;
 }
 
 .card {
@@ -144,11 +135,11 @@ h2 {
   margin: 0 auto;
 }
 
-.col-9.rain {
+.col-9.max {
   text-align: left;
 }
 
-.col-9.rainfall {
+.col-9.min {
   text-align: left;
 }
 
@@ -156,7 +147,7 @@ h2 {
   text-align: left;
 }
 
-.col-9.fire {
+.col-9.humidity {
   text-align: left;
 }
 

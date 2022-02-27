@@ -53,11 +53,12 @@ function displayWeather(response) {
   );
   document.querySelector("#weather-summary").innerHTML =
     response.data.weather[0].main;
-  document.querySelector("#min").innerHTML = Math.round(
-    response.data.main.temp_min
-  );
-  document.querySelector("#max").innerHTML = Math.round(
+
+  document.querySelector("#maximum").innerHTML = Math.round(
     response.data.main.temp_max
+  );
+  document.querySelector("#minimum").innerHTML = Math.round(
+    response.data.main.temp_min
   );
 }
 
