@@ -51,7 +51,7 @@ function displayWeather(response) {
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#description").innerHTML =
+  document.querySelector("#weather-summary").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#min").innerHTML = Math.round(
     response.data.main.temp_min
