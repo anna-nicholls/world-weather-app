@@ -39,7 +39,7 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
-todayDate.innerHTML = `${day} ${date} ${month}, ${hours}:${minutes}`;
+todayDate.innerHTML = `${day} ${hours}:${minutes}`;
 
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -52,7 +52,7 @@ function displayWeather(response) {
     response.data.wind.speed
   );
   document.querySelector("#weather-summary").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 
   document.querySelector("#maximum").innerHTML = Math.round(
     response.data.main.temp_max
@@ -91,7 +91,7 @@ form.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-btn");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Tokyo");
+searchCity("Sydney");
 
 // Code from previous activity below
 // F conversion and display in main

@@ -25,7 +25,7 @@ h2 {
 }
 
 .mb-3 {
-  width: 300px;
+  width: 310px;
   display: inline-flex;
   padding: 0 10px 0 10px;
   padding-top: 15px;
@@ -45,14 +45,6 @@ h2 {
   padding-left: 0px;
   padding-right: 60px;
   text-align: center;
-}
-
-.col-3.temperature-type {
-  display: block;
-  text-align: right;
-  padding-left: 0px;
-  padding-top: 15px;
-  padding-right: 20px;
 }
 
 .col-12.location {
@@ -87,7 +79,8 @@ h2 {
   font-size: 70px;
   text-align: right;
   padding-top: 20px;
-  padding-left: 20px;
+  padding-left: 40px;
+  padding-right: 0px;
 }
 
 .temp-units {
@@ -95,6 +88,7 @@ h2 {
   float: right;
   padding-top: 20px;
   padding-right: 10px;
+  font-weight: 600;
 }
 
 .col.main-description {
