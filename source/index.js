@@ -65,6 +65,8 @@ function displayWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   mainIcon.setAttribute("alt", response.data.weather[0].description);
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -96,8 +98,6 @@ form.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-btn");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Sydney");
-
 let mainIcon = document.querySelector("#main-icon");
 
 // Code from previous activity below
@@ -107,18 +107,20 @@ function displayFarenheit(event) {
   event.preventDefault();
   let mainTemp = document.querySelector("#main-temperature");
   let temperature = mainTemp.innerHTML;
-  mainTemp.innerHTML = `${Math.round((temperature * 9) / 5 + 32)}`;
+  mainTemp.innerHTML = `${Math.round((celsiusTemperature * 9) / 5 + 32)}`;
 }
 
 let farenheitLink = document.querySelector("#fahrenheit-button");
 farenheitLink.addEventListener("click", displayFarenheit);
+
+let celsiusTemperature = null;
 
 // C conversion and display in main
 
 function displayCelsius(event) {
   event.preventDefault();
   let mainTemp = document.querySelector("#main-temperature");
-  mainTemp.innerHTML = "26";
+  mainTemp.innerHTML = Math.round(celsiusTemperature);
 }
 
 let mainTemp = document.querySelector("#main-temperature");
@@ -126,3 +128,5 @@ let temperature = mainTemp.innerHTML;
 
 let celsiusLink = document.querySelector("#celsius-button");
 celsiusLink.addEventListener("click", displayCelsius);
+
+searchCity("Sydney");
