@@ -60,6 +60,11 @@ function displayWeather(response) {
   document.querySelector("#minimum").innerHTML = Math.round(
     response.data.main.temp_min
   );
+  mainIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  mainIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
@@ -92,6 +97,8 @@ let currentLocationButton = document.querySelector("#current-location-btn");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Sydney");
+
+let mainIcon = document.querySelector("#main-icon");
 
 // Code from previous activity below
 // F conversion and display in main
