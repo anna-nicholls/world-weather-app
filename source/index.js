@@ -23,23 +23,20 @@ let days = [
 ];
 let day = days[now.getDay()];
 
-let months = [
-  "Jan",
-  "Feb",
-  "March",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-let month = months[now.getMonth()];
-
 todayDate.innerHTML = `${day} ${hours}:${minutes}`;
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+let currentLocationButton = document.querySelector("#current-location-btn");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+let mainIcon = document.querySelector("#main-icon");
+let farenheitLink = document.querySelector("#fahrenheit-button");
+farenheitLink.addEventListener("click", displayFarenheit);
+let celsiusTemperature = null;
+let mainTemp = document.querySelector("#main-temperature");
+let temperature = mainTemp.innerHTML;
+let celsiusLink = document.querySelector("#celsius-button");
+celsiusLink.addEventListener("click", displayCelsius);
 
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -92,17 +89,6 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
-let currentLocationButton = document.querySelector("#current-location-btn");
-currentLocationButton.addEventListener("click", getCurrentLocation);
-
-let mainIcon = document.querySelector("#main-icon");
-
-// Code from previous activity below
-// F conversion and display in main
-
 function displayFarenheit(event) {
   event.preventDefault();
   let mainTemp = document.querySelector("#main-temperature");
@@ -110,23 +96,10 @@ function displayFarenheit(event) {
   mainTemp.innerHTML = `${Math.round((celsiusTemperature * 9) / 5 + 32)}`;
 }
 
-let farenheitLink = document.querySelector("#fahrenheit-button");
-farenheitLink.addEventListener("click", displayFarenheit);
-
-let celsiusTemperature = null;
-
-// C conversion and display in main
-
 function displayCelsius(event) {
   event.preventDefault();
   let mainTemp = document.querySelector("#main-temperature");
   mainTemp.innerHTML = Math.round(celsiusTemperature);
 }
-
-let mainTemp = document.querySelector("#main-temperature");
-let temperature = mainTemp.innerHTML;
-
-let celsiusLink = document.querySelector("#celsius-button");
-celsiusLink.addEventListener("click", displayCelsius);
 
 searchCity("Sydney");
