@@ -119,24 +119,6 @@ h2 {
   margin-left: 29px;
 }
 
-.week-weather {
-  padding-top: 30px;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 18px;
-}
-
-.card {
-  box-shadow: 1px 2px 3px rgb(0 0 0 / 10%);
-  border-radius: 15px;
-  padding-bottom: 5px;
-}
-
-.weekly {
-  display: block;
-  margin: 0 auto;
-}
-
 .col-9.max {
   text-align: left;
 }
@@ -151,6 +133,28 @@ h2 {
 
 .col-9.humidity {
   text-align: left;
+}
+
+.week-weather {
+  padding-top: 30px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.card {
+  box-shadow: 1px 2px 3px rgb(0 0 0 / 10%);
+  border-radius: 15px;
+  padding-bottom: 5px;
+}
+
+.weekly-icon {
+  display: block;
+  margin: 0 auto;
+}
+
+.weather-forecast-temperatures-min {
+  opacity: 0.5;
 }
 
 footer {
