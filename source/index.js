@@ -36,8 +36,10 @@ let celsiusTemperature = null;
 let mainTemp = document.querySelector("#main-temperature");
 let temperature = mainTemp.innerHTML;
 let celsiusLink = document.querySelector("#celsius-button");
+celsiusLink.addEventListener("click", displayCelsius);
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -69,6 +71,12 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  let apiKey = "ecdfc99638105d33f56972e50bcc57cc";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#main-temperature").innerHTML = Math.round(
@@ -95,6 +103,8 @@ function displayWeather(response) {
   mainIcon.setAttribute("alt", response.data.weather[0].description);
 
   celsiusTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -134,4 +144,3 @@ function displayCelsius(event) {
 }
 
 searchCity("Sydney");
-displayForecast();
