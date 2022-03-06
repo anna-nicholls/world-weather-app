@@ -3,8 +3,8 @@
 }
 
 .site-wrapper {
-  max-width: 700px;
-  max-height: 655px;
+  max-width: 650px;
+  max-height: 630px;
   margin: auto;
   border-bottom: 10px;
   padding: 20px 20px 20px 20px;
@@ -25,7 +25,7 @@ h2 {
 }
 
 .mb-3 {
-  width: 310px;
+  width: 295px;
   display: inline-flex;
   padding: 0 10px 0 10px;
   padding-top: 15px;
@@ -36,7 +36,7 @@ h2 {
 .col-3.searchButton {
   padding-top: 15px;
   padding-left: 0px;
-  padding-right: 17px;
+  padding-right: 0px;
   text-align: right;
 }
 
@@ -148,9 +148,12 @@ h2 {
 }
 
 .weather-forecast-temperatures-min {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
+.weather-forecast {
+  padding-top: 25px;
+}
 footer {
   text-align: center;
   padding-top: 30px;
