@@ -36,7 +36,38 @@ let celsiusTemperature = null;
 let mainTemp = document.querySelector("#main-temperature");
 let temperature = mainTemp.innerHTML;
 let celsiusLink = document.querySelector("#celsius-button");
-celsiusLink.addEventListener("click", displayCelsius);
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    
+          <div class="col-2">
+            
+              <div class="weather-forecast-date"><strong>${day}</strong></div>
+              <img
+                class="weekly-icon"
+                src="http://openweathermap.org/img/wn/50d@2x.png"
+                alt=""
+                width="80px"
+              />
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperatures-max">30 </span> /
+              <span class="weather-forecast-temperatures-min">  24 </span>
+
+
+              </div>
+            </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -103,3 +134,4 @@ function displayCelsius(event) {
 }
 
 searchCity("Sydney");
+displayForecast();
