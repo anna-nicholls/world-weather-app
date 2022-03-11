@@ -65,7 +65,7 @@ function displayForecast(response) {
              
               <img
                 class="weekly-icon"
-                src="images/weather1/${forecastDay.weather[0].icon}@2x.png"
+                src="images/weather1/${forecastDay.weather[0].icon}.png"
                 alt=""
                 width="100px"
               />
@@ -114,9 +114,8 @@ function displayWeather(response) {
   );
   mainIcon.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `images/weather1/${response.data.weather[0].icon}.png`
   );
-  mainIcon.setAttribute("alt", response.data.weather[0].description);
 
   celsiusTemperature = response.data.main.temp;
 
