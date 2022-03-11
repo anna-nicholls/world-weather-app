@@ -145,6 +145,7 @@ h2 {
 .weekly-icon {
   display: block;
   margin: 0 auto;
+  padding-bottom: 5px;
 }
 
 .weather-forecast-temperatures-min {
